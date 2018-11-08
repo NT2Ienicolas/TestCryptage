@@ -1,7 +1,7 @@
 #include <system.hpp>
 #include <windef.h>
 #include <stdio.h>
-//test github modif portable
+//test github modif portable n2
 #ifdef __alpha
 typedef unsigned int UINT4;
 #else

@@ -1,6 +1,7 @@
 // md5
 //
 //---------------------------------------------------------------------------
+//test github modif portable n2
 #include "md5.h"
 
 BYTE  m_lpszBuffer[64];
