@@ -235,3 +235,5 @@ int ReadKeyString (char sSection[50], char sKey[50], char sValue[1000], char nom
 
 	return iRet;
 }
+
+//Comment for git
