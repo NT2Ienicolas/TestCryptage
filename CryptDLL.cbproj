@@ -1,0 +1,293 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{344F00C7-700A-402C-A840-F7EFAA1C2C73}</ProjectGuid>
+        <ProjectType>CppDynamicLibrary</ProjectType>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <FrameworkType>None</FrameworkType>
+        <ProjectVersion>15.3</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Library</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <UsingDelphiRTL>true</UsingDelphiRTL>
+        <IncludePath>..\include;$(IncludePath)</IncludePath>
+        <BPILibOutputDir>..\lib</BPILibOutputDir>
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_Keys>CompanyName=Cezanne;FileDescription=KRYPTOR Integrity Check;FileVersion=0.0.1.1;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1036</VerInfo_Locale>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_Release>1</VerInfo_Release>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Build>1</VerInfo_Build>
+        <PackageImports>vcl.bpi;rtl.bpi;vclx.bpi;bcbsmp.bpi;dbrtl.bpi;adortl.bpi;vcldb.bpi;bdertl.bpi;vcldbx.bpi;dsnap.bpi;dsnap.bpi;dsnapcon.bpi;teeui.bpi;teedb.bpi;tee.bpi;ibxpress.bpi;vclie.bpi;xmlrtl.bpi;inet.bpi;inetdbbde.bpi;inetdbxpress.bpi;inetdb.bpi;bcbie.bpi;soaprtl.bpi;dbexpress.bpi;dbxcds.bpi;indycore.bpi;indysystem.bpi;bcboffice2k.bpi;$(PackageImports)</PackageImports>
+        <ILINK_BpiLibOutputDir>..\Lib</ILINK_BpiLibOutputDir>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <DCC_AdditionalSwitches> -N0..\Lib\ -M</DCC_AdditionalSwitches>
+        <BCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;..\Include;$(BCC_IncludePath)</BCC_IncludePath>
+        <ILINK_IntermediateOutputPath>..\Lib</ILINK_IntermediateOutputPath>
+        <ILINK_WinAppType>DLL</ILINK_WinAppType>
+        <BCC_OutputDir>..\Lib\</BCC_OutputDir>
+        <TASM_AdditionalSwitches> /w2 ..\Lib\</TASM_AdditionalSwitches>
+        <ILINK_AppType>Windows</ILINK_AppType>
+        <BRCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;..\Include;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+        <OutputExt>dll</OutputExt>
+        <BRCC_OutputDir>..\Lib\</BRCC_OutputDir>
+        <FinalOutputDir>..\..\Win32\Debug\</FinalOutputDir>
+        <ILINK_LibraryPath>$(BDS)\lib\obj;$(BDS)\lib;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <TASM_IncludePath>$(BDS)\include;$(BDS)\include\vcl;..\Include;$(TASM_IncludePath)</TASM_IncludePath>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+        <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <DCC_ObjOutput>..\Lib\</DCC_ObjOutput>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <VerInfo_Build>0</VerInfo_Build>
+        <VerInfo_Release>0</VerInfo_Release>
+        <BCC_UserSuppliedOptions> -tWM -Vx -r- -k -tWD -Ve</BCC_UserSuppliedOptions>
+        <TASM_Defines>_DEBUG;$(TASM_Defines)</TASM_Defines>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <BRCC_Defines>_DEBUG;$(BRCC_Defines)</BRCC_Defines>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <TASM_Defines>_DEBUG;$(TASM_Defines)</TASM_Defines>
+        <BRCC_Defines>_DEBUG;$(BRCC_Defines)</BRCC_Defines>
+        <Icon_MainIcon>kichk_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_AdditionalSwitches> -N0..\Lib\ -M -V</DCC_AdditionalSwitches>
+        <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+        <ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <LinkPackageStatics>rtl.lib;vcl.lib</LinkPackageStatics>
+        <Debugger_HostApplication>C:\dev_xe5\TestCryptage\Win32\Debug\ProjCryptagecbproj.exe</Debugger_HostApplication>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=0.0.1.1;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_AdditionalSwitches> -N0..\Lib\ -M -$O+</DCC_AdditionalSwitches>
+        <BCC_OptimizationLevel>Level2</BCC_OptimizationLevel>
+        <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+        <ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <TASM_Debugging>None</TASM_Debugging>
+        <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <VerInfo_Build>0</VerInfo_Build>
+        <VerInfo_Release>0</VerInfo_Release>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+        <BCC_UserSuppliedOptions> -tWM -Vx -r- -k -tWD -Ve -r</BCC_UserSuppliedOptions>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <ItemGroup>
+        <CppCompile Include="CryptDLL.cpp">
+            <BuildOrder>8</BuildOrder>
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <ResFiles Include="CryptDLL.res">
+            <BuildOrder>2</BuildOrder>
+            <BuildOrder>1</BuildOrder>
+        </ResFiles>
+        <CppCompile Include="md5.cpp">
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="UCryptage.cpp">
+            <DependentOn>UCryptage.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">0</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">1</VersionInfo>
+                    <VersionInfo Name="Build">1</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1036</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">Cezanne</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">KRYPTOR Integrity Check</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">0.0.1.1</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dcl31w60.bpl">Composants compatibilité Delphi 1.0</ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclite60.bpl">Environnement de traduction intégré Borland</ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclclxdb60.bpl">Composants BD CLX Borland</ExcludedPackages>
+                </ExcludedPackages>
+                <HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Count">2</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item0">$(BCB)\include;$(BCB)\include\vcl;..\Include</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item1">$(BCB)\include;$(BCB)\include\vcl</HistoryLists_hlIncludePath>
+                </HistoryLists_hlIncludePath>
+                <HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Count">1</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item0">$(BCB)\lib\obj;$(BCB)\lib</HistoryLists_hlLibraryPath>
+                </HistoryLists_hlLibraryPath>
+                <HistoryLists_hlDebugSourcePath>
+                    <HistoryLists_hlDebugSourcePath Name="Count">1</HistoryLists_hlDebugSourcePath>
+                    <HistoryLists_hlDebugSourcePath Name="Item0">$(BCB)\source\vcl</HistoryLists_hlDebugSourcePath>
+                </HistoryLists_hlDebugSourcePath>
+                <HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Count">1</HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Item0">_DEBUG</HistoryLists_hlConditionals>
+                </HistoryLists_hlConditionals>
+                <HistoryLists_hlIntOutputDir>
+                    <HistoryLists_hlIntOutputDir Name="Count">1</HistoryLists_hlIntOutputDir>
+                    <HistoryLists_hlIntOutputDir Name="Item0">..\Lib</HistoryLists_hlIntOutputDir>
+                </HistoryLists_hlIntOutputDir>
+                <HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Count">2</HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Item0">..\Lib\</HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Item1">..\Lib</HistoryLists_hlFinalOutputDir>
+                </HistoryLists_hlFinalOutputDir>
+                <HistoryLists_hIBPIOutputDir>
+                    <HistoryLists_hIBPIOutputDir Name="Count">1</HistoryLists_hIBPIOutputDir>
+                    <HistoryLists_hIBPIOutputDir Name="Item0">..\Lib</HistoryLists_hIBPIOutputDir>
+                </HistoryLists_hIBPIOutputDir>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs">$(BCB)\source\vcl</Debugging>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams"/>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">0</Parameters>
+                    <Parameters Name="DebugCWD"/>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">0</Parameters>
+                </Parameters>
+                <Compiler>
+                    <Compiler Name="ShowInfoMsgs">0</Compiler>
+                    <Compiler Name="LinkDebugVcl">0</Compiler>
+                    <Compiler Name="LinkCGLIB">0</Compiler>
+                </Compiler>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                </ProjectProperties>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k170.bpl">Package Serveurs Office 2000 Embarcadero C++Builder</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp170.bpl">Package Serveurs Office XP Embarcadero C++Builder</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k170.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp170.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
+                </Excluded_Packages>
+            </CPlusPlusBuilder.Personality>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
